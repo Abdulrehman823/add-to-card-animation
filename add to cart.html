@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product Card</title>
+  <style>
+    img{
+    width: 250px;
+    height: 250px;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #e1f6fc;
+}
+.product-card{
+    width: 300px;
+    background: #63c7d8;
+    border-radius: 20px;
+    padding: 15px 10px;
+    text-align: center;
+    box-shadow: 0 25px 40px rgba(0, 0, 0, 0.2);
+    transition: transform 0.4s ease, filter 0.4s ease;
+}
+.product-card:hover{
+    transform: translateY(-5px) scale(1.01);
+    filter: drop-shadow(0 25px 40px rgba(0, 0, 0, 0.2));
+}
+.img-box{
+    margin-top: -100px;
+}
+.img-box img{
+    filter: drop-shadow(0 15px 10px rgba(0, 0, 0, 0.5));
+    transition: transform 0.4s ease, filter 0.4s ease;
+}
+.product-card:hover .img-box img{
+    transform: translateY(-5px) scale(1.08);
+    filter: drop-shadow(0 25px 14px rgba(0, 0, 0, 0.4)); 
+}
+.product-card h2{
+    margin-top: 5px;
+    color: #fff;
+    text-shadow: 0 2px 2px rgba(27, 27, 27, 0.3);
+}
+.product-card p{
+    color: #eaf9fc;
+    font-size: 14px;
+    margin: 20px 8px;
+}
+.info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    color: #fff;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+.info strong{
+    font-size: 22px;
+}
+.cart{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    margin-bottom: 15px;
+}
+.qty{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #fff;
+}
+.qty button{
+    width: 25px;
+    height: 25px;
+    border: none;
+    background: transparent;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+}
+.add-btn{
+    padding: 8px 20px;
+    border: none;
+    font-size: 12px;
+    background: #ffb703;
+    border-radius: 25px;
+    color: #fff;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: 0.3s;
+}
+.add-btn:hover{
+    transform: translateY(-2px);
+    background: #ffcc4c;
+}
+  </style>
+</head>
+<body>
+
+<!-- REMOVE -->
+  <h1>“Your one subscribe motivates me 1000%.”</h1>
+  <a href="https://www.youtube.com/@Free-Code-Zone" 
+     target="_blank" 
+     style="display:inline-block; padding:12px 25px; background:red; color:white; 
+            text-decoration:none; border-radius:6px; font-size:18px; font-family:sans-serif;">
+    Subscribe Now
+  </a>
+  <!-- REMOVE -->
+
+   <div class="product-card">
+    <div class="img-box">
+        <img src="juice.png" alt="orange-juice">
+    </div>
+
+    <h2>Orange Juice</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore libero molestias, accusamus ex sapiente !</p>
+
+    <div class="info">
+        <span>1 x 250ml</span>
+        <strong>$3.99</strong>
+    </div>
+
+    <div class="cart">
+        <div class="qty">
+            <button>-</button>
+            <span>1</span>
+            <button>+</button>
+        </div>
+
+        <button class="add-btn">Add To Cart</button>
+    </div>
+   </div>
+</body>
+</html>
